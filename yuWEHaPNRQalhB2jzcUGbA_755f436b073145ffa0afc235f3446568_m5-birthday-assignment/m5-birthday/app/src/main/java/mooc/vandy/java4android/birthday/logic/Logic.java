@@ -83,19 +83,20 @@ public class Logic
         double counting = 0;
         for (int sim = 0; sim < count; sim++)
         {
+            Random age  =  new Random(sim);
             for (int i = 0; i < size; i ++)
             {
-                Random age  =  new Random(sim);
                 int day = age.nextInt(365);
                 if (ints.contains(day))
                 {
                     counting ++;
-                    break
+                    break;
                 }
                 ints.add(day);
 
 
             }
+            ints.clear();
         }
 
 
